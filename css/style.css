@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Nunito+Sans:opsz,wght@6..12,300;6..12,800&family=Raleway:wght@500&family=Roboto+Condensed&family=Rubik&display=swap');
+:root{
+    --lightning-color: #3366ff;
+    --dark-color:#333333;
+    /* --darker-color: #ff5050; */
+    --darker-color: #fd21db;
+    --secondary-color: #72E4F0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.3%;
+}
+body,html{
+    font-family: 'Nunito Sans', sans-serif;;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: white;
+}
+body{
+    font-size: 1.6rem;
+}
+.container{
+    max-width: 1428px;
+    margin: 0 auto;
+    height: 65px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+header{
+    background:var(--darker-color);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+nav ul{
+    display: flex;
+    gap: 1rem;
+}
+nav li{
+    font-size:1.9rem;
+    border-bottom: 0.4rem transparent solid;
+    transition: 0.4s ease-in-out;
+}
+nav li:hover{
+    border-bottom: 0.4rem var(--secondary-color) solid;
+    transition: 0.4s ease-in-out;
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 800;
+}
+#About{
+    background: var(--secondary-color);
+    color: black;
+    padding: 30rem 0;
+    border-bottom: 7px solid var(--darker-color);
+}
+.About_image img {
+    width: 634px; 
+    height: 799px;
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-top: 10px;
+    position: absolute;
+    top: 2%;
+    left: 11%;
+}
+
+#About .About_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 56%; 
+    left: 70%; 
+    transform: translate(-50%, -50%);
+    margin-top: -24px;
+    margin-left: 69px;
+}
+.About_content{
+    display: grid;
+    place-items: center;
+}
+#About h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.Hi_text{
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--darker-color);
+}
+.name_text{
+    font-size: 2.5rem;
+}
+#About h2{
+    font-size: 3rem;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.2em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 5s steps(40, end), blink-caret 0.76s step-end infinite;
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink-caret {
+    from,
+    to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: palevioletred;
+    }
+}
+.card img{
+    height: 20em;
+  width: 20em;
+  margin-left: 155px;
+}
+#project h2{
+    font-size: 6rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: #fd21db;
+    background-color: #72E4F0;
+}
+.project_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+.project_item{
+    display: grid;
+    place-items: center;
+}
+.card{
+    transition: 0.2s ease-in-out;
+    border-radius: 0.3rem;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+}
+.card:hover img{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    oapacity: 0.8s;
+}
+.card:hover .card_content {
+    background: white;
+    color: #3366ff;
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+    width: 102%;
+    height: 150%;
+}
+.card_content{
+    padding: 2rem;
+    position: relative;
+    top: -6.6rem;
+    margin-bottom: 6.5rem;
+    transform: translateY(100px);
+    transition:0.5s ease-in-out;
+}
+.card_content h3{
+    margin-left: 200px;
+    font-size: 24px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.About-me {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    height: 344px;
+}
+
+.about-heading {
+    color: rgb(3, 3, 3);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 45%;
+    transform: translateX(-50%);
+}
+.About-me img {
+    width: 136px;
+    height: 154px; 
+    margin-bottom: 91px;
+    margin-top: -233px;
+    margin-left: 542px;
+    max-width: 100%;
+    
+}
+/* Contact Section */
+#contact{
+    background: var(--darker-color);
+    margin-top: 353px;
+    width: 100%;
+    height: 500px;
+}
+section {
+    scroll-margin-top: 50px;
+}
+#contact .container {
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    display: flex;
+}
+#contact h2{
+    font-size: 8rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: #333333;
+    margin-top: -235px;
+
+}
+.bottom_contact{
+    /* margin-top: 67px;
+  margin-left: 645px;
+  align-items: center;
+  position: relative;
+  top: -175px; 
+  display: grid; */
+    max-width: 400px;
+    margin-left: 646px;
+    gap: 1rem;
+    margin-top: -200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+   font-size: 4rem;
+}
+
+.top_contact{
+    display: grid;
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(121px, 1fr));
+}
+.top_contact{
+    display: flex;
+    font-size: 2rem;   
+    margin-top: 4px;
+    color: black;
+    max-width: 800px;
+    gap: 4rem;
+}
+.contact_way{
+    font-weight: bold;
+}
+.contact_way i{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.top_contact .contact_way a i.fab.fa-linkedin {
+    background-color: #17a2f3;
+}
+.contact_way h3{
+    font-size: 2rem;
+    font-weight: bold;
+   color: black;
+}
+footer{
+    background-color: var(--darker-color);
+    padding: 2rem;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+#intro{
+    height: 600px;
+    padding: 6rem 0;
+}
+.container{
+    max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+#intro .new_div{
+    display: flex;
+  flex-wrap: wrap;
+}
+#intro .new_div .left-content{
+    flex-basis: 45%;
+  text-align: center;
+}
+.intro-heading .intro-content{
+    color: #fd21db;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+#intro .new_div .left-content p {
+    font-size: 18px; 
+    color: black;
+    margin-top: 10px; 
+    line-height: 1.5; 
+}
+.new_div img{
+    height: 200px;
+  width: 150px;
+  object-fit: cover;
+  margin-top: 37px;
+}
+.skills {
+    background-color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-left: 309px;
+  margin-top: -423px;
+}
+.skills-heading {
+    font-size: 40px;
+    color: #333;
+    color: #fd21db;
+    align-items: center;
+    margin-top: -37px;
+    margin-left: 371px;
+}
+.skills-bar {
+    padding: 25px 30px;
+}
+.skills-bar .bar {
+    margin: 25px 0;
+}
+.skills-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.skills-bar .info span{
+    font-weight: 200;
+    font-size: 4rem;
+    text-align: center;
+    margin-left: 309px;
+  }
+.skills-bar .bar .info {
+    margin-bottom: 8px;
+    color: white;
+}
+.skills-bar .bar .info span {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fd21db;
+}
+.skills-bar .bar .progress-line {
+    position: relative;
+    height: 10px;
+    width: 550px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    left: 313px;
+  }
+  @keyframes animate {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+ .bar .progress-line span {
+    position: absolute;
+    background: #fd21db;
+    left: -7px;
+    height: 100%;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    width: 80%
+  } 
+  .skills-bar .bar .html{
+    width: 90%;
+  }
+  .skills-bar .bar .css{
+    width: 70%;
+  }
+  .skills-bar .bar .javascript{
+    width: 20%;
+  }
+  .skills-bar .bar .SQL{
+    width: 80%;
+  }
+  .skills-bar .bar .c-programming{
+    width: 60%;
+  }
+
+
+
+
+
+
